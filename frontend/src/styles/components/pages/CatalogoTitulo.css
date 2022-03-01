@@ -1,0 +1,38 @@
+.catalogo img {
+    float: right;
+    /* position: relative; */
+    /* inline-end */
+    margin-top: 0%;
+    height: 150px;
+    width: 150px;
+}
+
+/* .catalogo .dire h2{
+    display: inline
+} */
+
+.catalogo .ano h3{
+    display: inline;
+    /* background-color: red; */
+}
+
+.catalogo hr {
+    border: 1px solid #DDDDDD;
+    margin: 25px 0px
+}
+
+.catalogo .rating h3{
+    display: inline;
+    background-color:gray;
+}
+
+.catalogo .borde{
+    margin-top: 0.8em;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    /* border: 1px solid #999; */
+    padding: 0.4em 0.6em;
+    /* font-size: 0.8em; */
+    /* width: 90%; */
+    outline: none;
+}

@@ -1,0 +1,41 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #ccc;
+}
+
+header img {
+    border-radius: 50%;
+    border-style: solid;
+}
+
+header  {
+    background-color: #2e64a1;
+    padding: 1em 0;  /*1em .... 16px */
+    /* 1 em siempre mira como està declarado en el body */    
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(115,7,27,0.938813025210084) 62%, rgba(0,212,255,1) 100%);
+}
+
+header h1{
+    color:rgb(115, 174, 185) /*100%*/;
+    font-size: 2.5em;
+    /*font-style: italic;*/
+    /*font-style: bold;*/
+    font-weight: 900;/* finita */
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+     /* background-color: red; */
+}
+
+header {
+    /* background-color: yellow; */
+    text-align: center;
+}

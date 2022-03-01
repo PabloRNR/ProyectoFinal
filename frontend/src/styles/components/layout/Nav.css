@@ -1,0 +1,38 @@
+nav{
+    background-color: #edda6d;
+    margin-bottom: 2em;
+}
+
+nav ul{
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    width: 25.0%;
+}
+
+nav ul li a{
+    color: rgb(43, 32, 32);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.2em 0.4em;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+nav ul li a.activo{
+    background-color: #4c76a5;
+}
+
+/* VER COMO DEJAR ACTIVO EL NAV */
+/* 
+nav ul NavLink.activo{
+    background-color: #4c76a5;
+} */

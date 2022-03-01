@@ -1,0 +1,9 @@
+header {
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+header h1 {
+	/*para corregir lo que se desplaza por bootstrap*/	
+    position: static;
+}

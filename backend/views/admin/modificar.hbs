@@ -1,0 +1,51 @@
+<div class="container" style="margin:100px 0">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Modificar un título</h4>
+            <form action="/admin/catalogo/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{titulo.id}}" name="id">
+                <div class="mb-3">     {{!-- <div class="mb-3 row"> --}}
+                    <label for="">Titulo</label>
+                    <input type="text" class="form-control" Name="title" value="{{titulo.title}}">   {{!-- placeholder="Titulo"  --}}
+                </div>
+                <div class="mb-3">     {{!-- <div class="mb-3 row"> --}}
+                    <label for="">Director</label>
+                    <input type="text" class="form-control" Name="director" value="{{titulo.director}}">   {{!-- placeholder="Titulo"  --}}
+                </div>
+                <div class="mb-3">     {{!-- <div class="mb-3 row"> --}}
+                    <label for="">Año</label>
+                    <input type="number" class="form-control" Name="year" pattern="[1900-2025]+" maxlength="4" value="{{titulo.year}}">   {{!-- placeholder="Titulo"  --}}
+                </div>
+                <div class="mb-3">     {{!-- <div class="mb-3 row"> --}}
+                    <label for="">Rating</label>
+                    <input type="number" class="form-control" Name="rating" pattern="[0-10]+" min="0.01" {{!--value="0"--}}  step=".01" value="{{titulo.rating}}">   {{!--placeholder="Titulo"--}}
+                </div>
+                <div class="mb-3">
+                    <label for="">Sinopsis</label>
+                    <textarea type="text" class="form-control" Name="sinopsis">{{titulo.sinopsis}}</textarea>
+                </div>
+                {{!-- <div class="form-group">
+                    <label>Poster: <input type="file" name="img_id" id="img_id" /></label>
+                </div> --}}
+                <div class="mb-3">
+                    <p>
+                        <label>Poster: <input type="file" name="img_id" id="img_id" /></label>
+                    </p>
+                    <p>
+                        <label ><input type="checkbox" name="img_delete" id="img_delete"
+                        value="1">
+                            Eliminar poster actual?</label>
+                        <input type="hidden" name="poster_original" value="{{titulo.img_id}}">
+                    </p>
+                </div>
+                {{!-- <button type="submit" class="btn btn-primary">Guardar</button> --}}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                </div>
+            </form>
+            {{#if error}}
+                {{message}}
+            {{/if}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+{{!-- <h2>Proximamemente ..... en la próxima unidad</h2> --}}
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col">
+            <p class="text-end">Hola {{usuario}}!<a class="btn btn-warning" href="/admin/login/logout">Cerrar sesión <i
+                        class="fas fa-sign-out-alt">
+                    </i>
+                </a>
+            </p>
+        </div>
+    </div>
+    {{!-- fila 2 --}}
+    <div>
+        <div class="row">
+            <div class="col-7">
+                <h2>Comentarios</h2>
+            </div>
+            <div class="col-5 text-end">
+                <a class="btn btn-success" href="/admin/comentarios/agregar"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo</a>
+            </div>
+        </div>
+    </div>
+    {{!-- fila 3 --}}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>      {{!-- esta clase parece que no afecta --}}
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Comentario</th>
+                        <th scope="col">Valoracion</th>
+                        <th {{!--scope="col" --}}class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{!-- entre el tbody y el tr va el for each --}}
+                    {{#each comentarios}}
+                    <tr>
+                        <th scope="row">{{ComID}}</th>
+                        <td>{{title}}</td>
+                        <td>{{OpdNom}}</td>
+                        <td>{{Comentario}}</td>
+                        <td>{{Valoracion}}</td>
+                        <td class="text-end">
+                            <a href="/admin/comentarios/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                            <a href="/admin/comentarios/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

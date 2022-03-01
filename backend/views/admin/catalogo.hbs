@@ -1,0 +1,63 @@
+{{!-- <h2>Proximamemente ..... en la próxima unidad</h2> --}}
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col">
+            {{#if usuario}}
+            <p class="text-end">Hola {{usuario}}!<a class="btn btn-warning" href="/admin/login/logout">Cerrar sesión <i
+                        class="fas fa-sign-out-alt">
+                    </i>
+                </a>
+            </p>
+            {{/if}}
+        </div>
+    </div>
+    {{!-- fila 2 --}}
+    <div>
+        <div class="row">
+            <div class="col-7">
+                <h2>Catalogo</h2>
+            </div>
+            <div class="col-5 text-end">
+                <a class="btn btn-success" href="/admin/catalogo/agregar"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar título</a>
+            </div>
+        </div>
+    </div>
+    {{!-- fila 3 --}}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>      {{!-- esta clase parece que no afecta --}}
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Rating</th>
+                        <th {{!--scope="col" --}}class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{!-- entre el tbody y el tr va el for each --}}
+                    {{#each catalogoFull}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{{imagen}}}</td>        {{!-- <td><a href="/admin/titulo/{{id}}">{{{imagen}}}</td></a> --}}
+                        {{!-- <td><strong>{{title}}<a href="/admin/comentarios/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a></strong></td> --}}
+                        <td><strong>{{title}}</strong></td>          {{!-- <td><a href="/admin/titulo/{{id}}"><strong>{{title}}</strong></td></a> --}}
+                        <td>{{year}}</td>
+                        <td>{{director}}</td>
+                        <td>{{rating}}</td>
+                        <td class="text-end">
+                            <a href="/admin/catalogo/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a> {{!-- i class="fas fa-pencil-alt" --}}                            
+                            <a href="/admin/catalogo/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa-solid fa-trash" aria-hidden="true"></i></a>
+
+                            
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

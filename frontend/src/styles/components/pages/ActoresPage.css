@@ -1,0 +1,62 @@
+.historia p{
+    font-size: 0.8em;
+}
+
+.actores{
+    overflow: hidden;
+}
+
+.actor{
+    width: 18%;
+    border: 4px solid gray;
+    border-radius: 0.25em;
+    float: left;
+    margin-left: 2.25%;
+    box-sizing: border-box;
+    margin-bottom: 2.25%;
+    /* background-color: red; */
+}
+
+.actor {
+    text-align: center;
+}
+
+.actor img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin: 0.8em 0 1em;
+    max-width: 70%;
+}
+
+.actor h5, .actor h6{
+    text-align: center;
+    font-weight: normal;
+    color: #2e64a1;
+    margin: 0;
+}
+
+.actor h5{
+    font-size: 1.0em;
+    font-weight: bold;
+    background-color: rgb(224, 125, 125);
+    color: black
+}
+
+.actor h6{
+    font-size: 0.8em;
+    font-style: italic;
+    background-color: black;
+    color: #edda6d;
+}
+
+.actor p{
+    font-size: 0.7em;
+    color: #444;
+    margin: 0 1em 1em;
+}
+
+.actor:first-child{
+    margin-left: 0;
+}

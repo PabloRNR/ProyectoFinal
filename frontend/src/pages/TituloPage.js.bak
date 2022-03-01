@@ -1,0 +1,10 @@
+import React from 'react';
+
+const TituloPage = (props) => {
+    return(
+        <div>TituloPage</div>
+    );
+}
+
+
+export default TituloPage;

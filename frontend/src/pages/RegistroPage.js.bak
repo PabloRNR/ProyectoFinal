@@ -1,0 +1,10 @@
+import React from 'react';
+
+const RegistroPage = (props) => {
+    return(
+        <div>RegistroPage</div>
+    );
+}
+
+
+export default RegistroPage;
